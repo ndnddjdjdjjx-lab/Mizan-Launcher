@@ -20,8 +20,9 @@ jobs:
         run: |
           mkdir /tmp/w
           cd /tmp/w
+          touch settings.gradle
           gradle wrapper --gradle-version 8.7
-          cp -r /tmp/w/gradlew /tmp/w/gradlew.bat /tmp/w/gradle "$GITHUB_WORKSPACE/Mizan/"
+          cp -r gradlew gradlew.bat gradle "$GITHUB_WORKSPACE/Mizan/"
 
       - name: Build debug APK
         working-directory: Mizan
